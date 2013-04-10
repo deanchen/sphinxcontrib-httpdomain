@@ -141,7 +141,7 @@ def http_resource_anchor(method, path):
 class HTTPResource(ObjectDescription):
 
     doc_field_types = [
-        TypedField('parameter', label='Params',
+        TypedField('parameter', label='Path Params',
                    names=('param', 'parameter', 'arg', 'argument'),
                    typerolename='obj', typenames=('paramtype', 'type')),
         TypedField('jsonparameter', label='Json Params',
