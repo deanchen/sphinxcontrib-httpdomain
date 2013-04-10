@@ -141,15 +141,16 @@ def http_resource_anchor(method, path):
 class HTTPResource(ObjectDescription):
 
     doc_field_types = [
-        TypedField('parameter', label='Parameters',
+        TypedField('parameter', label='Params',
                    names=('param', 'parameter', 'arg', 'argument'),
                    typerolename='obj', typenames=('paramtype', 'type')),
-        GroupedField('queryparameter', label='Query Parameters',
+        TypedField('jsonparameter', label='Json Params',
+                   names=('jsonparameter', 'jsonparam', 'json'),
+                   typerolename='obj', typenames=('jsontype', 'type')),
+        GroupedField('queryparameter', label='Query Params',
                      names=('queryparameter', 'queryparam', 'qparam', 'query')),
-        GroupedField('formparameter', label='Form Parameters',
+        GroupedField('formparameter', label='Form Params',
                      names=('formparameter', 'formparam', 'fparam', 'form')),
-        GroupedField('jsonparameter', label='Json Parameters',
-                     names=('jsonparameter', 'jsonparam', 'json')),
         GroupedField('statuscode', label='Status Codes',
                      rolename='statuscode',
                      names=('statuscode', 'status', 'code'))
